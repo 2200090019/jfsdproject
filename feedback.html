@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/feedback.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Course Feedback</title>
+    <style>
+        body{
+            background: url('https://www.shutterstock.com/image-photo/flat-lay-composition-laptop-pen-260nw-1686600523.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Cover the entire viewport */
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">OCMS</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="course-registration.html">Course Registration</a></li>
+            <li><a href="assignment-submission.html">Assignment Submission</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <h2>Course Feedback</h2>
+        <p>We value your feedback! Please share your thoughts about the course you registered for.</p>
+        
+        <form class="feedback-form">
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" name="courseName" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+
+            <button type="submit" class="submit-button">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Course Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

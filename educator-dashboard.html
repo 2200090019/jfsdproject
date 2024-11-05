@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/educator-dashboard.css">
+    <title>Educator Dashboard</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="index.html">Online Course Management System</a></div>
+        <ul class="nav-links">
+            <li><a href="check-progress.html">Progress</a></li>
+            <li><a href="add-course.html">Add Course</a></li>
+            <li><a href="add-assignment.html">Add Assignment</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            <
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+
+        <div class="dashboard-section">
+            <h3>Add New Course</h3>
+            <form id="add-course-form">
+                <div class="form-group">
+                    <label for="course-title">Course Title:</label>
+                    <input type="text" id="course-title" name="course-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-description">Course Description:</label>
+                    <textarea id="course-description" name="course-description" required></textarea>
+                </div>
+                <button type="submit">Add Course</button>
+            </form>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Check Student Progress</h3>
+            <button id="check-progress">View Progress</button>
+        </div>
+
+        
+    </div>
+
+    <script>
+        // Handle course addition
+        document.getElementById('add-course-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const courseTitle = document.getElementById('course-title').value;
+            const courseDescription = document.getElementById('course-description').value;
+            alert(`Course "${courseTitle}" added successfully!`);
+            // Reset form after submission
+            this.reset();
+        });
+
+        // Handle assignment addition
+        document.getElementById('add-assignment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const assignmentTitle = document.getElementById('assignment-title').value;
+            const assignmentDetails = document.getElementById('assignment-details').value;
+            alert(`Assignment "${assignmentTitle}" added successfully!`);
+            // Reset form after submission
+            this.reset();
+        });
+
+        // Check student progress
+        document.getElementById('check-progress').addEventListener('click', function() {
+            // In a real application, this would fetch data from a server
+            alert('Displaying student progress...');
+        });
+    </script>
+</body>
+</html>

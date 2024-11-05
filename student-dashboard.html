@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/student-dashboard.css">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="index.html">Online Course Management System</a></div>
+        <ul class="nav-links">
+            
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="course-registration.html">Course Registration</a></li>
+            <li><a href="assignment-submission.html">Assignment Submission</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+
+        <div class="dashboard-section">
+            <h3>Available Courses</h3>
+            <ul id="course-list">
+                <!-- Courses will be populated here -->
+            </ul>
+        </div>
+
+        
+    </div>
+
+    <script>
+        // Dummy courses data
+        const courses = [
+            { title: "Course 1", description: "Intro to Course 1" },
+            { title: "Course 2", description: "Intro to Course 2" },
+            { title: "Course 3", description: "Intro to Course 3" }
+        ];
+
+        // Populate course list
+        const courseList = document.getElementById("course-list");
+        courses.forEach(course => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${course.title}: ${course.description}`;
+            const registerButton = document.createElement("button");
+            registerButton.textContent = "Register";
+            registerButton.onclick = () => {
+                alert(`You have registered for ${course.title}`);
+            };
+            listItem.appendChild(registerButton);
+            courseList.appendChild(listItem);
+        });
+
+        // Handle assignment submission
+        document.getElementById('assignment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Assignment submitted successfully!');
+            // Reset form after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>
